@@ -18,6 +18,8 @@ export class AppComponent {
       new MovieModel({ title: 'Test 3', date:  new Date(), price: 2000 })
     ]  
 
+    console.log(this.movies);
+
     this.moviesNext = [
       new MovieModel({ title: 'Next 1', date:  new Date(), price: 2333 }),
       new MovieModel({ title: 'Next 2', date:  new Date(), price: 3112 }),
@@ -33,5 +35,7 @@ export class MovieModel {
 
   constructor(params?: Partial<MovieModel>){
     this.title = params?.title ?? null;
+    this.date = params?.date ?? null;
+    this.price = params?.price ?? null;
   }
 }
