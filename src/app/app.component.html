@@ -34,15 +34,8 @@
     flex: 1;
   }
 
-
-
   .content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
+    margin: 82px 0;
   }
 
 </style>
@@ -51,5 +44,14 @@
 <app-toolbar></app-toolbar>
 
 <div class="content" role="main">
-  <app-list-movies></app-list-movies>
+  <div class="row">
+    <div class="col-lg-12">
+        <h3>EN CINES</h3>
+    </div>
+    <app-list-movies [movies]="movies"></app-list-movies>
+    <div class="col-lg-12">
+        <h3>PRÓXIMOS ESTRENOS</h3>
+    </div>
+    <app-list-movies [movies]="moviesNext"></app-list-movies>
+  </div>
 </div>

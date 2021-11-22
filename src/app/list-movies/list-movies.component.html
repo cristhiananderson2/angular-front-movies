@@ -1,5 +1,7 @@
 <div class="row">
-    <div class="col-lg-4">a</div>
-    <div class="col-lg-4">b</div>
-    <div class="col-lg-4">c</div>
+    <div *ngFor="let item of movies; let i = index" class="col-lg-4 border">
+        <div><strong>Película {{i + 1}}</strong>: {{item.title}}</div>
+        <div><strong>Fecha:</strong> {{item.date}}</div>
+        <div><strong>Precio:</strong> {{item.price}}</div>
+    </div>
 </div>
