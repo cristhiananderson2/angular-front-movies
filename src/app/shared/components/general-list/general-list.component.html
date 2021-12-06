@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-lg-12" *ngIf="!list">
+        <img src="https://media0.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif">
+    </div>
+    
+    <div class="col-lg-12" *ngIf="list?.length === 0">
+        <p>No hay películas por mostrar</p>
+    </div>
+
+    <ng-container *ngIf="list && list.length">
+        <ng-content select="[contenido]"></ng-content>
+    </ng-container>
+</div>

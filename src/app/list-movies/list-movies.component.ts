@@ -3,12 +3,11 @@ import { MovieModel } from '../app.component';
 
 @Component({
   selector: 'app-list-movies',
-  templateUrl: './list-movies.component.html',
-  styleUrls: ['./list-movies.component.css']
+  templateUrl: './list-movies.component.html'
 })
 export class ListMoviesComponent implements OnInit {
 
-  @Input() movies: MovieModel[] = [];
+  @Input() movies: MovieModel[];
 
   constructor() { }
 

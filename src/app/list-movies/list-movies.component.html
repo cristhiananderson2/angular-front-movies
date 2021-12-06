@@ -1,8 +1,10 @@
-<div class="row">
-    <div *ngFor="let item of movies; let i = index" class="col-lg-4 border">
-        <div><strong>Película {{i + 1}}</strong>: {{item.title}}</div>
-        <div><strong>Fecha:</strong> {{item.date | date: 'dd-MMMM-yyyy'}}</div>
-        <div><strong>Precio:</strong> {{item.price}}</div>
-        <button (click)="remove(i)">Eliminar</button>
-    </div>
-</div>
+<app-general-list [list]="movies">
+    <ng-container contenido>
+        <div *ngFor="let item of movies; let i = index" class="col-lg-4 border">
+            <div><strong>Película {{i + 1}}</strong>: {{item.title}}</div>
+            <div><strong>Fecha:</strong> {{item.date | date: 'dd-MMMM-yyyy'}}</div>
+            <div><strong>Precio:</strong> {{item.price}}</div>
+            <button (click)="remove(i)">Eliminar</button>
+        </div>
+    </ng-container>
+</app-general-list>
